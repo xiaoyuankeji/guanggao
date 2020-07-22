@@ -1,0 +1,47 @@
+
+.toubu{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100rpx;
+  justify-content: ;
+}
+
+
+
+.touxiang{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+  width: 90rpx;
+  height: 90rpx;
+  background-color: blueviolet;
+}
+
+.touxiangpang{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.uerName{
+  
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: 25rpx;
+ color: #555555;
+}
+
+.position{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: 20rpx;
+  color: #dededede;
+}
+
+.jiage{
+  color:#999999;
+  font-weight: 200rpx;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}

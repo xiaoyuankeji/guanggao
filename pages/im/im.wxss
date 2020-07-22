@@ -1,0 +1,70 @@
+/* pages/databaseGuide/databaseGuide.wxss */
+
+@import "../../style/guide.wxss";
+
+.zhengti{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.guide .counter {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+.customer{
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+
+}
+.information{
+  display: flex;
+  background-color: #fe5310;
+}
+.touxiang{
+  
+  height: 150rpx;
+  margin-top:20rpx;
+  margin-left: 20rpx;
+  margin-bottom: 50rpx;
+  border-radius: 80rpx;
+}
+.shupai{
+  display: flex;
+  flex-direction: column;
+}
+
+.nickName{
+  color: #ffffff;
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+  font-weight: 20rpx;
+}
+.gender{
+  width:45rpx;
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+
+}
+.Geography{
+  color: #ffffff;
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+  margin-bottom: 15rpx;
+  font-size: 25rpx;
+  
+}
+
+.edit{
+  font-size: 25rpx;
+  color:#dedede;
+  margin-right:10rpx;
+  margin-top:20rpx;
+}

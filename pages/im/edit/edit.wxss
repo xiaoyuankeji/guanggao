@@ -1,0 +1,28 @@
+/* miniprogram/pages/im/edit/edit.wxss */
+.zhengti{
+  display: flex;
+  flex-direction: column;
+  
+}
+.touxiangwai{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.touxiang{
+  
+  margin-top: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+  
+  
+}
+.camera{
+  
+  border-radius: 5rpx;
+  margin-top: 150rpx;
+  margin-left: 150rpx;
+  width: 50rpx;
+  height: 50rpx;
+}

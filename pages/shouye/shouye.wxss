@@ -1,0 +1,85 @@
+/* miniprogram/pages/shouye/shouye.wxss */
+/* 整体 */
+.zhengti{
+  
+  display: flex;
+  
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* 内部包裹层 */
+.neibu{
+  margin-top: 2%;
+  border-radius: 10rpx;
+  border-style: solid;
+  box-shadow:0px 2px 4px 2px #DDDDDD;
+  border-width: 0rpx;
+
+}
+/* 左布局 */
+.left {
+  margin-left: 1%;
+ margin-right: 1%;
+  
+} 
+
+/* 右布局 */
+.right{
+ margin-left: 1%;
+ margin-right: 1%;
+
+  
+}
+/* 图片 */
+.image{
+ border-top-left-radius: 10rpx;
+ border-top-right-radius: 10rpx;
+
+
+}
+
+/* 描述 */
+.miaoshu{
+  
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+
+  margin-left: 2%;
+  font-size:30rpx ;
+  color: #222222;
+}
+
+
+/* 内容包裹 */
+.neirong{
+  display: flex;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-bottom: 2rpx;
+  align-items: center;
+  
+}
+/* 头像 */
+.touxiang{
+  
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+}
+/* 昵称文字 */
+.nameText{
+  
+
+
+
+
+  margin-left: 30rpx;
+  font-size: 20rpx;
+  color: #999999;
+  align-items:center;
+  
+}

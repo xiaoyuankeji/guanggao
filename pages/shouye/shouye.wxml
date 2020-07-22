@@ -1,0 +1,41 @@
+<van-search value="{{ value }}" background="#4fc08d" shape="round" placeholder="请输入搜索关键词" use-action-slot bind:change="onChange" bind:search="onSearch">
+	<view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
+
+<!-- 按钮实验 -->
+<!-- <button bindtap="dataList"  >按钮触发</button> -->
+<!-- 除了搜索外整体buju -->
+<view class="zhengti">
+
+  <!-- 左边 -->
+	<view class="left" style="width:48%">
+    <!-- 内框 -->
+		<view class="neibu" wx:for="{{obj}}" wx:for-tiem="item" wx:if="{{!item.leftRight}}"  style="width:100%"  bindtap="tiaozhuan" data-index="{{item._id}}"  >
+      <image class="image" src="{{item.abc}}" mode="widthFix" style="width:360rpx;"></image>
+      	<text class="miaoshu" >{{item.miaoshu}}</text>
+			<view class="neirong">
+				<image class="touxiang" src="{{item.touxiang}}"></image>
+				<text  class="nameText">{{item.uerName}}</text>
+
+			</view>
+			</view>
+	</view>
+
+
+  <!-- 右边 -->
+	<view class="right" style="width:48%">
+    <!-- 内框 -->
+		<view  class="neibu" wx:for="{{obj}}" wx:for-tiem="item"  wx:if="{{item.leftRight}}" style="width:100%;" bindtap="tiaozhuan" data-index="{{item._id}}" >
+     <image class="image" src="{{item.abc}}" mode="widthFix" style="width:360rpx;"></image>
+     	<text class="miaoshu" >{{item.miaoshu}}</text>
+			<view class="neirong">
+				<image class="touxiang" src="{{item.touxiang}}"></image>
+				<text  class="nameText">{{item.uerName}}</text>
+
+			</view>
+    </view>
+	</view>
+
+
+
+</view>

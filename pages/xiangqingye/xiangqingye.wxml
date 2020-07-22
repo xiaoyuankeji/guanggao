@@ -1,0 +1,39 @@
+<view class="toubu" >
+<image class="touxiang" mode="widthFix" src="{{touxiang}}"></image> 
+<view class="touxiangpang">
+<text class="uerName"  >{{uerName}}</text>
+<text class="position" >发布于：{{position}}</text>
+</view>
+</view>
+
+<van-divider />
+
+<text class="jiage">市场参考价：￥{{jiage}}</text>
+<text>{{miaoshu}}</text>
+<image   style="width:100%"  mode="widthFix" src="{{tupian0}}"></image>
+<image   style="width:100%"  mode="widthFix" src="{{tupian1}}"></image>
+<image   style="width:100%"  mode="widthFix" src="{{tupian2}}"></image>
+<image   style="width:100%"  mode="widthFix" src="{{tupian3}}"></image>
+<image   style="width:100%"  mode="widthFix" src="{{tupian4}}"></image>
+<image   style="width:100%"  mode="widthFix" src="{{tupian5}}"></image>
+<image   style="width:100%"  mode="widthFix" src="{{tupian6}}"></image>
+<image   style="width:100%"  mode="widthFix" src="{{tupian7}}"></image>
+<image   style="width:100%"  mode="widthFix" src="{{tupian8}}"></image>
+
+
+
+
+<!-- 商品导航 -->
+<view class="dibu">
+<van-goods-action >
+  <!-- <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" />
+  <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickIcon" /> -->
+  <van-goods-action-button
+    text="分享"
+    type="warning"
+    open-type="share"
+  />
+
+  <van-goods-action-button  open-type="contact" text="免费咨询" bind:click="onClickButton" />
+</van-goods-action>
+</view>

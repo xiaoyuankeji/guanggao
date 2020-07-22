@@ -1,0 +1,50 @@
+<!--miniprogram/pages/im/edit/edit.wxml-->
+
+<view class="zhengti" >
+<view class="touxiangwai">
+<button bindtap="uploadPictures">
+<view   style="position: absolute;">
+<image class="camera" src="cloud://guojiawen-h3uw4.6775-guojiawen-h3uw4-1302038499/照相机.png"></image>
+
+</view>
+<view>
+<image class="touxiang" src="{{avatarUrl}}" ></image>
+</view>
+</button>
+</view>
+
+<!-- 分割线 -->
+<van-divider />
+
+<!-- 昵称输入框 -->
+<van-cell-group>
+  <van-field
+    value="{{ value }}"
+    placeholder="{{nickName}}"
+    label="用户昵称："
+    border="{{ false }}"
+    bind:change="onChange"
+    type="textarea"
+    autosize
+  />
+  
+</van-cell-group>
+<!-- 分割线 -->
+<van-divider />
+<!-- 自我介绍 -->
+<van-cell-group>
+  <van-field
+    value="{{ message }}"
+    label="自我介绍："
+    type="textarea"
+    placeholder="{{introduce}}"
+    bind:change="onChangeIntroduce"
+    autosize
+    border="{{ false }}"
+  />
+</van-cell-group>
+
+
+
+<button bindtap="confirm" style="default">确认修改</button>
+</view>

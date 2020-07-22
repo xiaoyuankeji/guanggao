@@ -1,0 +1,29 @@
+<view class="information">
+<image class="touxiang" mode="widthFix" style="width: 150rpx;" src="{{avatarUrl}}" ></image>
+<view class="shupai" style="width:80%">
+<button class="nickName" catchtap="uerData"  open-type="getUserInfo">{{nickName}}
+<image class="gender"  mode="widthFix" wx:if="{{gender}}" src="cloud://guojiawen-h3uw4.6775-guojiawen-h3uw4-1302038499/性别男.png"  ></image>
+<image class="gender"  mode="widthFix" wx:if="{{!gender}}" src="cloud://guojiawen-h3uw4.6775-guojiawen-h3uw4-1302038499/性别女.png"  ></image>
+</button>
+
+
+<text class="Geography">{{country}}\t {{province}}</text>
+<text  class="Geography" style="width:100%"  >{{introduce}}</text>
+</view>
+
+
+<button class="edit" bindtap="edit" style="width:20%"  data-openid="{{_id}}"   >编辑</button>
+</view>
+
+
+<view class="customer">
+	<button open-type="contact"> 
+		<text>寄卖</text>
+	</button>
+</view>
+
+<van-divider />
+
+<navigator url="./room/room" open-type="navigate" class="customer">
+	<text>求货出货群</text>
+</navigator>
