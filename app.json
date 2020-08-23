@@ -15,8 +15,10 @@
     "pages/im/im",
     "pages/im/room/room",
     "pages/xiangqingye/xiangqingye",
+    "pages/im/edit/edit",
+    "pages/publish/publish",
     "pages/text/text",
-    "pages/im/edit/edit"
+    "pages/im/my-publish/my-publish"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -35,10 +37,16 @@
         "text": "一手买手"
       },
       {
+        "pagePath": "pages/publish/publish",
+        "iconPath": "images/publish1.png",
+        "selectedIconPath": "images/publish.png",
+        "text": "发布"
+      },
+      {
         "pagePath": "pages/im/im",
         "iconPath": "images/wode2.png",
         "selectedIconPath": "images/wode.png",
-        "text": "寄卖"
+        "text": "我的"
       }
     ]
   },

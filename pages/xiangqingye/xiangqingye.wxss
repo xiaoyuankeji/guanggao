@@ -45,3 +45,7 @@
   font-size: 30rpx;
   margin-left: 20rpx;
 }
+
+.dibu{
+  background-color: rgba(0,0,0,0);
+}

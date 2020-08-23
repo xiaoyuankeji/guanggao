@@ -29,12 +29,14 @@
   background-color: #fe5310;
 }
 .touxiang{
-  
-  height: 150rpx;
+  height: 120rpx;
+  width: 150rpx;
+  background-color:#ffffff;
+  border-radius: 100rpx;
   margin-top:20rpx;
   margin-left: 20rpx;
   margin-bottom: 50rpx;
-  border-radius: 80rpx;
+ 
 }
 .shupai{
   display: flex;

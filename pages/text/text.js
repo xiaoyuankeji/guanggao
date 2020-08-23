@@ -9,9 +9,48 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    goods_description: ''
+
   },
 
+  text:function(){
+    console.log("点击1实验按钮")
+    wx.navigateToMiniProgram({
+      appId: 'wxb036cafe2994d7d0',
+      path: '/portal/group-profile/group-profile?group_id=13104378350848831&invite_ticket=BgAAKp3-Mbcoq3dCBt3yrH68EQ&fromScene=bizArticle',
+      extraData: {
+        foo: 'bar'
+      },
+      // develop
+      envVersion: 'release',
+      success(res) {
+        // 打开成功
+      }
+    })
+  },
+
+
+
+    show:function(){
+     
+      wx.cloud.callFunction({
+        // 云函数名称
+        name: 'addtext',
+        // 传给云函数的参数
+        data: {
+          a: 1,
+          b: 2,
+        },
+        success: function(res) {
+          console.log("云函数返回值",res) // 3
+        },
+        fail: console.error
+      })
+
+
+
+    },
 
 //   // 获取用户信息
 
@@ -51,43 +90,7 @@ Page({
  * 生命周期函数--监听页面加载
  */
 onLoad: function (options) {
-  wx.getSetting({
-    success: res => {
-      if (res.authSetting['scope.userInfo']) {
-        // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-        this.text()
-      }
-    }
-  })
-},
-
-text:function(){
-    var that = this
-  wx.getUserInfo({
-    success: function(res) {
-      var userInfo = res.userInfo
-      var nickName = userInfo.nickName
-      var avatarUrl = userInfo.avatarUrl
-      var gender = userInfo.gender //性别 0：未知、1：男、2：女
-      var province = userInfo.province
-      var city = userInfo.city
-      var country = userInfo.country
-     
-      console.log(avatarUrl)
-      that.setData({
-        avatarUrl
-      })
-    }
-  })
-
-
-  // wx.cloud.callFunction({
-  //   name:"login",
-  //   data:{},
-  //   success:res=>{
-  //     console.log(res)
-  //   }
-  // })
+  
 },
 
 

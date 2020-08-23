@@ -79,11 +79,35 @@ Page({
       success (res) {
         // tempFilePath可以作为img标签的src属性显示图片
         const tempFilePaths = res.tempFilePaths
-        that.touxiangUpData(tempFilePaths)
-        console.log(tempFilePaths)
+        that.uploadchucun(tempFilePaths)
+        console.log("临时头像路径",tempFilePaths)
       }
     })
   },
+
+  //传入储存空间
+  uploadchucun:function(tempFilePaths){
+  console.log("上传到储存空间")
+  var that = this
+  var tempFilePaths = tempFilePaths + ""
+  var avatarUrl = this.data.openid + ".png"
+  console.log("头像最终命名",avatarUrl)
+    // 将图片上传至云存储空间
+    wx.cloud.uploadFile({
+      cloudPath: avatarUrl, // 上传至云端的路径
+      filePath: tempFilePaths, // 小程序临时文件路径
+      success: res => {
+        // 返回文件 ID
+        console.log("已上传",res.fileID)
+        var tempFilePaths = res.fileID
+        that.touxiangUpData(tempFilePaths)
+      },
+      fail: console.error
+    })
+
+
+  },
+
 
   // 更新数据库头像数据
   touxiangUpData:function(tempFilePaths){

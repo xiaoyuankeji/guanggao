@@ -5,35 +5,53 @@
 <!-- 按钮实验 -->
 <!-- <button bindtap="dataList"  >按钮触发</button> -->
 <!-- 除了搜索外整体buju -->
+<view class="quanzizhengti">
+
+<view class="quanzi" bindtap="shanghai" >
+<image class="quanziimage" src="/images/shanghai.png" ></image>
+<text style="justify-content:center;">上海奢侈品圈子</text>
+</view>
+<view class="quanzi"  bindtap="beijing">
+<image class="quanziimage" src="/images/beijing.png" ></image>
+<text>北京奢侈品圈子</text>
+</view>
+
+</view>
+
+<van-divider />
+
 <view class="zhengti">
 
-  <!-- 左边 -->
+	<!-- 左边 -->
 	<view class="left" style="width:48%">
-    <!-- 内框 -->
-		<view class="neibu" wx:for="{{obj}}" wx:for-tiem="item" wx:if="{{!item.leftRight}}"  style="width:100%"  bindtap="tiaozhuan" data-index="{{item._id}}"  >
-      <image class="image" src="{{item.abc}}" mode="widthFix" style="width:360rpx;"></image>
-      	<text class="miaoshu" >{{item.miaoshu}}</text>
+		<!-- 内框 -->
+		<view class="neibu" wx:for="{{obj}}" wx:for-tiem="item" wx:if="{{!item.leftRight}}" style="width:100%" bindtap="tiaozhuan" data-index="{{item._id}}">
+			<image class="image" src="{{item.abc}}" mode="widthFix" style="width:360rpx;"></image>
+			<video class="image" wx:if="{{videoJudge}}" src="{{item.abc}}"></video>
+			<text class="miaoshu" >{{item.miaoshu}}</text>
 			<view class="neirong">
 				<image class="touxiang" src="{{item.touxiang}}"></image>
 				<text  class="nameText">{{item.uerName}}</text>
 
 			</view>
-			</view>
+		</view>
 	</view>
 
 
-  <!-- 右边 -->
+	<!-- 右边 -->
 	<view class="right" style="width:48%">
-    <!-- 内框 -->
-		<view  class="neibu" wx:for="{{obj}}" wx:for-tiem="item"  wx:if="{{item.leftRight}}" style="width:100%;" bindtap="tiaozhuan" data-index="{{item._id}}" >
-     <image class="image" src="{{item.abc}}" mode="widthFix" style="width:360rpx;"></image>
-     	<text class="miaoshu" >{{item.miaoshu}}</text>
+		<!-- 内框 -->
+		<view class="neibu" wx:for="{{obj}}" wx:for-tiem="item" wx:if="{{item.leftRight}}" style="width:100%;" bindtap="tiaozhuan" data-index="{{item._id}}">
+			<image class="image" src="{{item.abc}}" mode="widthFix" style="width:360rpx;"></image>
+			<video class="image" wx:if="{{videoJudge}}" src="{{item.abc}}"></video>
+			<text class="miaoshu" >{{item.miaoshu}}</text>
 			<view class="neirong">
 				<image class="touxiang" src="{{item.touxiang}}"></image>
+
 				<text  class="nameText">{{item.uerName}}</text>
 
 			</view>
-    </view>
+		</view>
 	</view>
 
 

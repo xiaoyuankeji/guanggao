@@ -26,3 +26,6 @@
   width: 50rpx;
   height: 50rpx;
 }
+.queren{
+  margin-top: 200rpx;
+}

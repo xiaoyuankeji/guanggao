@@ -34,6 +34,6 @@
     open-type="share"
   />
 
-  <van-goods-action-button  open-type="contact" text="免费咨询" bind:click="onClickButton" />
+  <van-goods-action-button  open-type="contact" text="联系一手卖家" bind:click="onClickButton" />
 </van-goods-action>
 </view>

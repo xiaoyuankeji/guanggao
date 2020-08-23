@@ -46,5 +46,5 @@
 
 
 
-<button bindtap="confirm" style="default">确认修改</button>
+<button bindtap="confirm" class="queren" style="default">确认修改</button>
 </view>

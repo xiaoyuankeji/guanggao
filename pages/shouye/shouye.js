@@ -20,7 +20,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
- 
+    wx.showTabBar({})
+    this.data.obj = []
+
     wx.showToast({
 
       title: '加载中',      
@@ -30,6 +32,47 @@ Page({
     this.dataList()
     
   },
+
+
+// 跳转微信圈子功能
+shanghai:function(){
+  console.log("点击1实验按钮")
+    wx.navigateToMiniProgram({
+      appId: 'wxb036cafe2994d7d0',
+      path: '/portal/group-profile/group-profile?group_id=13104378350848831&invite_ticket=BgAAKp3-Mbcoq3dCBt3yrH68EQ&fromScene=bizArticle',
+      extraData: {
+        foo: 'bar'
+      },
+      // develop
+      envVersion: 'release',
+      success(res) {
+        // 打开成功
+      }
+    })
+},
+beijing:function(){
+  console.log("点击1实验按钮")
+  wx.navigateToMiniProgram({
+    appId: 'wxb036cafe2994d7d0',
+    path: '/portal/group-profile/group-profile?group_id=13104375380757129&invite_ticket=BgAAQLuSVWP9ZjgxACSErPLM0Q&fromScene=bizArticle',
+    extraData: {
+      foo: 'bar'
+    },
+    // develop
+    envVersion: 'release',
+    success(res) {
+      // 打开成功
+    }
+  })
+},
+
+
+
+
+
+
+
+
 
   // 跳转详情页
   tiaozhuan:function(e){
@@ -50,6 +93,18 @@ Page({
     })
 
   },
+
+
+  shenhe:function(){
+    wx.showTabBar({})
+    wx.showToast({
+      title: '审核中',
+      icon:"waiting",
+      duration: 2000,
+      
+    })
+  },
+
 
   //调用云函数返回云数据库数据
   dataList: function () {
@@ -76,12 +131,10 @@ Page({
     db.collection('shechipinlist')
       .skip(listnuber)
       .where({
-        miaoshu: db.RegExp({
-          regexp: value,
-          options: 'i',
+        shenhe: 'TRUE',
         })
-        })
-        .orderBy("_id","desc")
+        .orderBy("time",'desc')
+        // .orderBy("_id","desc")
         .get().then(res => {
 
       console.log("i的值",res.data[i])
@@ -118,7 +171,7 @@ Page({
       
       //
 
-    })
+    },)
   },
 
 

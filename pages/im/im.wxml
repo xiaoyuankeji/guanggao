@@ -1,5 +1,5 @@
 <view class="information">
-<image class="touxiang" mode="widthFix" style="width: 150rpx;" src="{{avatarUrl}}" ></image>
+<image class="touxiang"  src="{{avatarUrl}}" ></image>
 <view class="shupai" style="width:80%">
 <button class="nickName" catchtap="uerData"  open-type="getUserInfo">{{nickName}}
 <image class="gender"  mode="widthFix" wx:if="{{gender}}" src="cloud://guojiawen-h3uw4.6775-guojiawen-h3uw4-1302038499/性别男.png"  ></image>
@@ -16,9 +16,16 @@
 </view>
 
 
+<!-- <navigator url="./my-publish/my-publish?data={{openid}}" open-type="navigate" class="customer">
+	<text>我的发布</text>
+</navigator>
+
+<van-divider /> -->
+
+
 <view class="customer">
 	<button open-type="contact"> 
-		<text>寄卖</text>
+		<text>我要寄卖</text>
 	</button>
 </view>
 

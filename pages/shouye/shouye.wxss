@@ -3,10 +3,37 @@
 .zhengti{
   
   display: flex;
-  
+  margin-top: 20rpx;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.quanzizhengti{
+  display: flex;
+  width: 100%;
+  margin-top: 2%;
+}
+.quanzi{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 48%;
+  height: 250rpx;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: 10rpx;
+  border-color: #dedede;
+
+}
+
+.quanziimage{
+  width: 100%;
+  border-radius: 10rpx;
+  height: 198rpx;
+}
+
+
+
 /* 内部包裹层 */
 .neibu{
   margin-top: 2%;

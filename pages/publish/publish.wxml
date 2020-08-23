@@ -1,0 +1,116 @@
+<!--pages/publish/publish.wxml-->
+<!-- 头部自定义标题栏 -->
+
+
+<view class="custom" style="padding-top:30rpx">
+
+  <view class="headKuangJia">   
+    <button class="back" bindtap="back">返回</button>
+    <text class="titileText">发布商品信息</text>
+</view>
+  
+</view>
+<view class="empty_custom" style="padding-top:20rpx"></view>
+
+
+
+<view class="container" style="background-color:#ffffff;">
+  <view class="up-boarder-view"></view>
+  <view class="view-register">
+
+   
+    <view class='view-publish-txt'>
+      <image class='img-txt-back' src='/images/publish_txt_back.png'></image>
+      <textarea class='input-describe' value='{{goods_description}}' placeholder='请尽可能详细描述商品~' bindinput='onDescribeChange'></textarea>
+    </view>
+    <view class='view-publish-img'>
+      <image class='img-img-back' src='/images/publish_img_back.png'></image>
+      <view class='view-inner-pub-img'>
+        <text class='txt-inner-title'>添加图片</text>
+        <text class='txt-inner-hint'>请勿在文字、图片中填写直接联系方式</text>
+        <view class='view-grid'>
+          <view class="view-grid-unit">
+            <image class='img-unit' src='/images/add_img.png' wx:if='{{goods_imgs.length==0}}' bindtap='onAddImg'></image>
+            <image class='img-unit' wx:if='{{goods_imgs.length>=1}}' data-index='1' src='{{goods_imgs[0]}}' bindtap='onRemoveImg'></image>
+          </view>
+          <view class="view-grid-unit">
+            <image class='img-unit' src='/images/add_img.png' wx:if='{{goods_imgs.length==1}}' bindtap='onAddImg'></image>
+            <image class='img-unit' wx:if='{{goods_imgs.length>=2}}' data-index='2' src='{{goods_imgs[1]}}' bindtap='onRemoveImg'></image>
+          </view>
+          <view class="view-grid-unit">
+            <image class='img-unit' src='/images/add_img.png' wx:if='{{goods_imgs.length==2}}' bindtap='onAddImg'></image>
+            <image class='img-unit' wx:if='{{goods_imgs.length>=3}}' data-index='3' src='{{goods_imgs[2]}}' bindtap='onRemoveImg'></image>
+          </view>
+          <view class="view-grid-unit">
+            <image class='img-unit' src='/images/add_img.png' wx:if='{{goods_imgs.length==3}}' bindtap='onAddImg'></image>
+            <image class='img-unit' wx:if='{{goods_imgs.length>=4}}' data-index='4' src='{{goods_imgs[3]}}' bindtap='onRemoveImg'></image>
+          </view>
+          <view class="view-grid-unit">
+            <image class='img-unit' src='/images/add_img.png' wx:if='{{goods_imgs.length==4}}' bindtap='onAddImg'></image>
+            <image class='img-unit' wx:if='{{goods_imgs.length>=5}}' data-index='5' src='{{goods_imgs[4]}}' bindtap='onRemoveImg'></image>
+          </view>
+          <view class="view-grid-unit">
+            <image class='img-unit' src='/images/add_img.png' wx:if='{{goods_imgs.length==5}}' bindtap='onAddImg'></image>
+            <image class='img-unit' wx:if='{{goods_imgs.length>=6}}' data-index='6' src='{{goods_imgs[5]}}' bindtap='onRemoveImg'></image>
+          </view>
+          <view class="view-grid-unit">
+            <image class='img-unit' src='/images/add_img.png' wx:if='{{goods_imgs.length==6}}' bindtap='onAddImg'></image>
+            <image class='img-unit' wx:if='{{goods_imgs.length>=7}}' data-index='7' src='{{goods_imgs[6]}}' bindtap='onRemoveImg'></image>
+          </view>
+          <view class="view-grid-unit">
+            <image class='img-unit' src='/images/add_img.png' wx:if='{{goods_imgs.length==7}}' bindtap='onAddImg'></image>
+            <image class='img-unit' wx:if='{{goods_imgs.length>=8}}' data-index='8' src='{{goods_imgs[7]}}' bindtap='onRemoveImg'></image>
+          </view>
+          <view class="view-grid-unit">
+            <image class='img-unit' src='/images/add_img.png' wx:if='{{goods_imgs.length==8}}' bindtap='onAddImg'></image>
+            <image class='img-unit' wx:if='{{goods_imgs.length>=9}}' data-index='9' src='{{goods_imgs[8]}}' bindtap='onRemoveImg'></image>
+          </view>
+        </view>
+
+      </view>
+      
+
+
+
+
+    </view>
+
+    <!-- 价格内容 -->
+  <view  class="content">
+  <view class="rowlist">
+  <text  class="textShoujia" style="color：#dedede;">售价</text>
+  <input class="much-input"  maxlength="10" bindinput="bindKeyInput" placeholder="￥0.00"/>
+  </view><van-divider  borderColor="#dedede"/>
+
+  </view>
+  
+
+    <!-- 提交审核按钮 -->
+    <form class='view-form' bindtap="formSubmit" report-submit='true'>
+      <view class="view-btn">
+        <image class="register-img" src="/images/publish_submit.png"></image>
+        <button class="register-btn" formType="submit" open-type="getUserInfo "></button>
+      </view>
+    </form>
+
+  
+
+  </view>
+
+</view>
+
+<!-- <button style="margin-top:500rpx" bindtap="uploadData">测试按钮</button> -->
+
+<view class='view-pub-success' wx:if="{{show_success}}">
+  <view class="view-success-center">
+    <text class='txt-success-title'>发布成功</text>
+    <view class='view-success-body'>
+      <text class='txt-success-hint1'>已通知</text>
+      <text class='txt-success-hint2'>{{notify_num}}</text>
+      <text class='txt-success-hint3'>名同行您的求货信息</text>
+    </view>
+    <view class='view-success-footer' bindtap='onKnownTap'>
+      <text class='txt-known'>知道了</text>
+    </view>
+  </view>
+</view>
