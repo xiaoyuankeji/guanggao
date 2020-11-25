@@ -1,100 +1,94 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"cloudfunctionRoot": "cloudfunction/",
-	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"enhance": false,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": false,
-		"coverView": true,
-		"nodeModules": false,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.12.1",
-	"appid": "wx3ccd409b7d8886a9",
-	"projectname": "miniprogram-1",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"scripts": {},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"current": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": 0,
-					"name": "pages/im/edit/edit",
-					"pathName": "pages/im/edit/edit",
-					"query": "_id=oHWfx0E5OCE3gt_H5zkWh76p8oVc",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/publish/publish",
-					"pathName": "pages/publish/publish",
-					"query": "_id=oHWfx0E5OCE3gt_H5zkWh76p8oVc",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/text/text",
-					"pathName": "pages/text/text",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/im/im",
-					"pathName": "pages/im/im",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "cloudfunctionRoot": "cloudfunction/",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.1",
+  "appid": "wx3ccd409b7d8886a9",
+  "projectname": "miniprogram-1",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "pages/im/edit/edit",
+          "pathName": "pages/im/edit/edit",
+          "query": "_id=oHWfx0E5OCE3gt_H5zkWh76p8oVc",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/publish/publish",
+          "pathName": "pages/publish/publish",
+          "query": "_id=oHWfx0E5OCE3gt_H5zkWh76p8oVc",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/text/text",
+          "pathName": "pages/text/text",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/im/im",
+          "pathName": "pages/im/im",
+          "scene": null
+        }
+      ]
+    }
+  }
 }
