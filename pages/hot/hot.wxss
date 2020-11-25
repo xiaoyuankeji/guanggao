@@ -1,0 +1,220 @@
+/* 整体控制 */
+page {
+  background: #ffffff;
+  height: 1900rpx;
+}
+
+/* pages/hot/hot.wxss */
+/* 自定义导航栏开始 */
+.custom {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* height: 45px; */
+  /* background: #c00; */
+  /* z-index: 999; */
+  background: #fff;
+}
+
+.headKuangJia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 15rpx;
+  align-items: center;
+
+}
+
+.back {
+  margin-left: 0rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+
+  color: #555555;
+}
+
+.titileText {
+  display: flex;
+  font-weight: bold;
+  margin-right: 318rpx;
+  font-size: 30rpx;
+  color: #555555;
+
+}
+
+/* 自定义标题栏结束 */
+
+
+/* 正品保证区域 */
+
+.zhengpin {
+  margin-top: 122rpx;
+  width: 100%;
+
+  height: 137rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.zhengpintext {
+  margin-top: 44rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  color: #555555;
+
+}
+
+/* 主题信息 */
+.listnumber {
+  margin-top: 27rpx;
+  font-size: 23rpx;
+  color: #999999;
+  margin-left: 10rpx;
+}
+
+.ProductList {
+  width: 100%;
+  margin-top: 1rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  right: 10rpx;
+  border: 3rpx solid;
+  border-color: #A0A0A0;
+
+  border-width: 3rpx;
+  border-radius: 10rpx;
+  height: 302rpx;
+  width: 730rpx;
+  margin-left: 10rpx;
+  margin-top: 15rpx;
+
+}
+
+.paixu {
+  width: 149rpx;
+  height: 149rpx;
+}
+
+.paixutext {
+  
+  position: absolute;
+  margin-top: 20rpx;
+  margin-left: -125rpx;
+  font-size: 50rpx;
+  font-weight: bolder;
+}
+
+.shopimage {
+  position: absolute;
+  margin-top: 20rpx;
+  z-index: -1;
+  margin-left: -135rpx;
+  width: 220rpx;
+  height: 220rpx;
+}
+
+.wenzi{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50rpx;
+  margin-left: 125rpx;
+}
+
+.miaoshu {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 440rpx;
+
+
+
+}
+
+.much{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ 
+}
+.siku{
+  margin-top: 80rpx;
+  font-size: 20rpx;
+  color: #999999;
+}
+.miaosha{
+  color: #F70303;
+ 
+}
+.jiesheng{
+  color: #999999;
+  font-size: 20rpx;
+  margin-left: 23rpx;
+}
+
+.number{
+  display: fixed;
+  margin-top: -20rpx;
+  margin-left: -120rpx;
+  font-size: 20rpx;
+  color: #999999;
+}
+
+.destine{
+  position: fixed;
+  border-radius: 0;
+  bottom: 0rpx;
+  height: 120rpx;
+  width: 100%;
+  background-color: #F70303;
+}
+
+.Destin_layout{
+  display:flex;
+  flex-direction: row;
+  margin-left: -20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  width: 750rpx;
+}
+.left_text{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rpx;
+  margin-left: 21rpx;
+}
+.data_time{
+  
+  font-size: 20rpx;
+  color: #ffffff;
+
+
+}
+.Countdown_text{
+  color: #ffffff;
+  margin-top: -30rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.free_destin{
+  
+  color: #ffffff;
+  font-size: 50rpx;
+  font-weight: bolder;
+  margin-left: 100rpx;
+  margin-top: 0rpx;
+  
+}

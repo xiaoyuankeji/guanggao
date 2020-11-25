@@ -10,9 +10,34 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    goods_description: ''
+    goods_description: '',
+    abc:"",
+    show:false,
+    actions: [
+      {
+        name: '选项',
+      },
+      {
+        name: '选项',
+      },
+      {
+        name: '选项',
+        subname: '副文本',
+        openType: 'share',
+      },
+    ],
 
   },
+
+  onClose() {
+    this.setData({ show: false });
+  },
+
+  onSelect(event) {
+    console.log(event.detail);
+  },
+
+
 
   text:function(){
     console.log("点击1实验按钮")
@@ -33,23 +58,66 @@ Page({
 
 
     show:function(){
-     
-      wx.cloud.callFunction({
-        // 云函数名称
-        name: 'addtext',
-        // 传给云函数的参数
-        data: {
-          a: 1,
-          b: 2,
-        },
-        success: function(res) {
-          console.log("云函数返回值",res) // 3
-        },
-        fail: console.error
+      var that = this
+      wx.chooseVideo({
+        sourceType: ['album','camera'],
+        maxDuration: 60,
+        camera: 'back',
+        success(res) {
+          console.log(res.tempFilePath)
+          var abc = res.tempFilePath
+          that.setData({
+            abc:abc
+          })
+        }
       })
 
+      // wx.cloud.callFunction({
+      //   // 云函数名称
+      //   name: 'addtext',
+      //   // 传给云函数的参数
+      //   data: {
+      //     a: 1,
+      //     b: 2,
+      //   },
+      //   success: function(res) {
+      //     console.log("云函数返回值",res) // 3
+      //   },
+      //   fail: console.error
+      // })
 
 
+
+    },
+
+
+    show1:function(){
+      this.setData({
+        show:true
+      })
+    },
+
+
+    pass:function(e){
+      var that = this
+      console.log(e.currentTarget.dataset['id'])
+      var id = e.currentTarget.dataset['id']
+    
+      const db = wx.cloud.database()
+      db.collection('shechipinlist').doc(id).update({
+        data:{
+          shenhe:true
+        },
+        success:function(res){
+          console.log("成功了",res.data)
+        },
+        fail:function(err){
+          console.log("失败了",err)
+        }
+      })
+
+    
+    
     },
 
 //   // 获取用户信息

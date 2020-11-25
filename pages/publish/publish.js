@@ -26,7 +26,9 @@ Page({
     province: "",
     country: "",
     huancun1:0,
-    huancun2:1
+    huancun2:1,
+    show:false,
+    videojudge:false
 
 
 
@@ -38,7 +40,8 @@ Page({
     this.setData({
       goods_imgs : [],
       goods_description:"",
-      jiage:''
+      jiage:'',
+      videojudge:false
     })
     wx.switchTab({
       url: '../shouye/shouye',
@@ -97,7 +100,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.hideTabBar({})
+    // wx.hideTabBar({})
     
     var that = this
 
@@ -221,22 +224,93 @@ Page({
   //传image生成的IP地址
   onAddImg: function () {
     
-   
+   this.setData({
+     show:true
+   })
 
 
+  
+  },
+
+  //传video生成的IP地址
+
+  onVideo:function(){
+    
     var that = this
+    
+    wx.chooseVideo({
+      sourceType: ['album','camera'],
+      maxDuration: 60,
+      camera: 'back',
+      success(res) {
+        console.log(res.tempFilePath)
+        var abc = res.tempFilePath
+        var time = new Date().getTime();
+        var openid = that.data._id
+        var videoname = time + openid +'.mp4'
+        let count = 9 - that.data.goods_imgs.length
+        wx.cloud.uploadFile({
+          cloudPath: videoname, // 上传至云端的路径
+          filePath: abc, // 小程序临时文件路径
+          success: res => {
+            // 返回文件 ID
+            that.data.goods_imgs.unshift(res.fileID)
+            var mp4 = that.data.goods_imgs
+            console.log("MP4的值",mp4)
+            that.setData({
+              
+              goods_imgs: mp4,
+              show:false,
+              videojudge:true
+            })
+            console.log("上传视频成功",res.fileID)
 
 
-    let count = 9 - this.data.goods_imgs.length
-    wx.chooseImage({
-      count: count,
-      success: function (res) {
+          },
+          fail: console.error
+        })
+        
+
+
+
         that.setData({
-          goods_imgs: that.data.goods_imgs.concat(res.tempFilePaths),
+          abc:abc
         })
       }
     })
   },
+
+
+  // 上传到储存
+  
+
+
+
+
+ //传image生成的IP地址
+onImgIp:function(){
+
+  var that = this
+  let count = 9 - this.data.goods_imgs.length
+  wx.chooseImage({
+    count: count,
+    success: function (res) {
+      that.setData({
+        goods_imgs: that.data.goods_imgs.concat(res.tempFilePaths),
+        show:false
+      })
+    }
+  })
+
+},
+
+
+
+
+
+
+
+
 
 
   //封装变量并上传至数据库
@@ -304,7 +378,8 @@ Page({
         that.setData({
           goods_imgs : [],
           goods_description:"",
-          jiage:''
+          jiage:'',
+          videojudge:false
         })
         wx.switchTab({
           url: '../shouye/shouye',
@@ -326,11 +401,28 @@ Page({
           }
         },4000)
       }
-    },1000)
+    })
 
 
 
   },
+
+
+// 上传内容弹框
+
+// 上传视频
+
+
+// 上传图片
+
+
+// 取消
+quxiao:function(){
+  this.setData({
+    show:false
+  })
+},
+
 
 
 
@@ -391,14 +483,48 @@ Page({
     var touxiang = this.data.avatarUrl
     var miaoshu = this.data.miaoshu
     var tupian = this.data.tupian
-
+    var cloudpath
+    var j = i + 1
+    
     console.log(i, imageLength)
     //获取原始时间戳，是计算机元年时间
     var time = new Date().getTime();
     console.log("时间", time)
     var imagePath = this.data.goods_imgs[i]
     console.log("imagePath的值", imagePath)
-    var cloudpath = openid + time +i + ".png"
+   
+    if(imagePath.indexOf("mp4")>=0){
+
+       console.log('是mp4的')
+       
+       if (j == imageLength) {
+        // 如果i等于图片长度时循环完毕，并实现最受一次上传云储存库
+        console.log("最后一次循环并跳出")
+        that.setData({
+          tupian: that.data.tupian.concat(imagePath)
+
+        })
+        that.uploudOpenidlist(time)
+
+        //准备启动上传数据库的方法
+      } else {
+        console.log("循环中")
+        that.setData({
+          tupian: that.data.tupian.concat(imagePath)
+        })
+
+
+      }
+      
+    
+    }else{
+      console.log("不是mp4")
+       cloudpath = openid + time +i + ".png"
+      
+    }
+     
+ 
+    
     console.log("cloudpath的值",cloudpath)
     
     wx.cloud.uploadFile({
@@ -407,7 +533,7 @@ Page({
       success: res => {
           
         // 返回文件 ID
-        var j = i + 1
+        
         console.log("是否有返回值", res.fileID)
         console.log("j的值 ",j,"imageLength的值",imageLength)
         if (j == imageLength) {
@@ -452,7 +578,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.hideTabBar({})
+    // wx.hideTabBar({})
 
     
     

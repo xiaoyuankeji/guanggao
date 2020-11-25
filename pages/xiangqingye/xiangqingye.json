@@ -5,7 +5,8 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "一手商品",
     "backgroundColor": "#eeeeee",
-    "backgroundTextStyle": "light",
-    "enablePullDownRefresh": false
+    "backgroundTextStyle": "custom",
+    "enablePullDownRefresh": false,
+    "disableScroll": true
   }
 }

@@ -8,10 +8,16 @@
   flex-wrap: wrap;
 }
 
+.weixin{
+  margin-top: 20rpx;
+  font-size: 20rpx;
+  color: #999999;
+  margin-left: 1%;
+}
 .quanzizhengti{
   display: flex;
   width: 100%;
-  margin-top: 2%;
+  
 }
 .quanzi{
   display: flex;
@@ -64,6 +70,10 @@
 
 
 }
+.video{
+  width: 100%;
+
+}
 
 /* 描述 */
 .miaoshu{
@@ -108,5 +118,11 @@
   font-size: 20rpx;
   color: #999999;
   align-items:center;
+  
+}
+.push{
+  position:fixed;
+  bottom:20rpx;
+  left: 580rpx;
   
 }

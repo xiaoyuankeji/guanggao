@@ -4,7 +4,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   height: 100rpx;
-  justify-content: ;
+ 
 }
 
 
@@ -29,7 +29,7 @@
   margin-top: 20rpx;
   margin-left: 20rpx;
   font-size: 25rpx;
- color: #555555;
+  color: #555555;
 }
 
 .position{
@@ -48,4 +48,99 @@
 
 .dibu{
   background-color: rgba(0,0,0,0);
+}
+
+.videozhengti{
+  
+  
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  scroll:hidden;
+  background-color: aqua;
+  
+
+}
+
+.video{
+width: 100%;
+height: 100%;
+}
+
+.video_text{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20rpx;
+  
+  width: 100%;
+  margin-left: 2%;
+
+  
+}
+
+.uerName_wenzi{
+  color: #ffffff; 
+}
+
+.wenzi{
+  font-size: 30rpx;
+  color: #ffffff;
+  margin-left: 30rpx;
+  
+}
+
+.video_button{
+  display: flex;
+  position: fixed;
+  bottom: 150rpx;
+  width: 100rpx;
+  
+  right: 20rpx;
+  
+}
+.rigint_buttton{
+  
+  
+}
+
+.image_button{
+  
+  background-color: rgba(0,0,0,0);
+}
+.consulting_button{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.consulting{
+  opacity: 0.8;
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 13rpx;
+
+}
+
+.share_button{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.share{
+ 
+  width: 80rpx;
+  height: 80rpx;
+  opacity: 0.8;
+}
+
+.right_wenzi{
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 25rpx;
+  margin-bottom: 0;
+  color:#ffffff;
 }

@@ -31,7 +31,9 @@
         <view class='view-grid'>
           <view class="view-grid-unit">
             <image class='img-unit' src='/images/add_img.png' wx:if='{{goods_imgs.length==0}}' bindtap='onAddImg'></image>
-            <image class='img-unit' wx:if='{{goods_imgs.length>=1}}' data-index='1' src='{{goods_imgs[0]}}' bindtap='onRemoveImg'></image>
+            <video class="video" wx:if="{{videojudge}}"  src="{{goods_imgs[0]}}"></video>
+            <image class='img-unit' wx:if='{{goods_imgs.length>=1 && !videojudge}}' data-index='1' src='{{goods_imgs[0]}}' bindtap='onRemoveImg'></image>
+            
           </view>
           <view class="view-grid-unit">
             <image class='img-unit' src='/images/add_img.png' wx:if='{{goods_imgs.length==1}}' bindtap='onAddImg'></image>
@@ -113,4 +115,16 @@
       <text class='txt-known'>知道了</text>
     </view>
   </view>
+</view>
+
+
+<!-- 选择图片弹框 -->
+<view class="backtankuang" wx:if="{{show}}">
+<view class="background" bindtap="quxiao"></view>
+<view class="tankuang"  >
+<button class="button1 tan-button" bindtap="onVideo" >上传视频</button>
+<button class="button2 tan-button" bindtap="onImgIp" >上传照片</button>
+<button class="button3 tan-button" bindtap="quxiao"   >取消</button>
+</view>
+
 </view>

@@ -5,6 +5,7 @@
 <!-- 按钮实验 -->
 <!-- <button bindtap="dataList"  >按钮触发</button> -->
 <!-- 除了搜索外整体buju -->
+<text class="weixin">微信官方圈子</text>
 <view class="quanzizhengti">
 
 <view class="quanzi" bindtap="shanghai" >
@@ -26,8 +27,9 @@
 	<view class="left" style="width:48%">
 		<!-- 内框 -->
 		<view class="neibu" wx:for="{{obj}}" wx:for-tiem="item" wx:if="{{!item.leftRight}}" style="width:100%" bindtap="tiaozhuan" data-index="{{item._id}}">
-			<image class="image" src="{{item.abc}}" mode="widthFix" style="width:360rpx;"></image>
-			<video class="image" wx:if="{{videoJudge}}" src="{{item.abc}}"></video>
+			<video class="image" wx:if="{{videoJudge}}"  src="{{item.abc}}"></video>
+			<image class="image" wx:if="{{!videoJudge}}" src="{{item.abc}}" mode="widthFix" style="width:360rpx;"></image>
+			
 			<text class="miaoshu" >{{item.miaoshu}}</text>
 			<view class="neirong">
 				<image class="touxiang" src="{{item.touxiang}}"></image>
@@ -42,8 +44,12 @@
 	<view class="right" style="width:48%">
 		<!-- 内框 -->
 		<view class="neibu" wx:for="{{obj}}" wx:for-tiem="item" wx:if="{{item.leftRight}}" style="width:100%;" bindtap="tiaozhuan" data-index="{{item._id}}">
-			<image class="image" src="{{item.abc}}" mode="widthFix" style="width:360rpx;"></image>
-			<video class="image" wx:if="{{videoJudge}}" src="{{item.abc}}"></video>
+			<view   wx:if="true">
+			<video class="video"   wx:if="{{videoJudge}}" src="{{item.abc}}" autoplay="true" muted="true"></video>
+			</view>
+			<view wx:if="{{!videoJudge}}">
+			<image class="image"    src="{{item.abc}}" mode="widthFix" style="width:360rpx;"></image>
+		</view>
 			<text class="miaoshu" >{{item.miaoshu}}</text>
 			<view class="neirong">
 				<image class="touxiang" src="{{item.touxiang}}"></image>
@@ -55,5 +61,14 @@
 	</view>
 
 
+
+</view>
+
+
+
+<view class="push">
+<button bindtap="push">
+	<image style="width:116rpx;height:116rpx" src="/images/publish1@2x.png"></image>
+</button>
 
 </view>

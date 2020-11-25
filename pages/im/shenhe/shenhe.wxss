@@ -1,0 +1,22 @@
+/* pages/im/shenhe/shenhe.wxss */
+.list{
+  margin: 3%;
+  border-color: salmon;
+  border-style: dotted;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonshenhe{
+  display: flex;
+  flex-direction: row;
+  margin: 10rpx;
+}
+
+.wenzi{
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+}

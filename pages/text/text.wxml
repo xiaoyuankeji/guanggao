@@ -1,8 +1,26 @@
 
 
+<image src="cloud://guojiawen-h3uw4.6775-guojiawen-h3uw4-1302038499/oHWfx0E5OCE3gt_H5zkWh76p8oVc16012671323206.png"></image>
+
+<video src="cloud://guojiawen-h3uw4.6775-guojiawen-h3uw4-1302038499/1601025597110oHWfx0E5OCE3gt_H5zkWh76p8oVc.mp4"></video>
+
+
 
   <button bindtap="text"  open-type="getUserInfo">实验按钮</button>
 
-  
+
 
   <button bindtap="show" >显示实验按钮</button>
+
+   <button bindtap="show1" >显示弹框</button>
+
+  <video src="{{abc}}"></video>
+
+<view class="zhengti" wx:if="{{show}}">
+
+<view class="tankuang"  >
+<button class="button1" type="primary">上传视频</button>
+<button class="button2" type="primary">上传照片</button>
+<button class="3" type="primary">取消</button>
+</view>
+</view>

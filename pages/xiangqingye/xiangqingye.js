@@ -18,7 +18,8 @@ Page({
     tupian5 : '',
     tupian6 : '',
     tupian7 : '',
-    tupian8 : ''
+    tupian8 : '',
+    videoJudge:false
  
 
 
@@ -58,6 +59,14 @@ Page({
       var tupian6 = this.data.tupian6 = res.data.tupian6
       var tupian7 = this.data.tupian7 = res.data.tupian7
       var tupian8 = this.data.tupian8 = res.data.tupian8
+      
+
+      if(tupian0.indexOf("mp4") >= 0){
+        console.log("判断视频这里了")
+        this.data.videoJudge = true
+      }
+      var videoJudge = this.data.videoJudge
+      console.log("判断是否是视频",videoJudge)
 
       this.setData({
         uerName ,
@@ -72,7 +81,8 @@ Page({
         tupian5 ,
         tupian6 ,
         tupian7 ,
-        tupian8 
+        tupian8 ,
+        videoJudge
       })
       
     })
@@ -85,6 +95,7 @@ Page({
 
   onClickButton() {
     console.log('免费咨询');
+ 
   },
 
   /**
@@ -126,7 +137,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**

@@ -111,7 +111,10 @@ beijing:function(){
     
     var that = this
    
-    var listnuber = this.data.listnuber + this.data.page*20
+    // var listnuber = this.data.listnuber + this.data.page*20
+    var listnuber = Math.floor(Math.random() * 300 )
+
+    
     var value = this.data.value
     
     // console.log("搜所值",value)
@@ -150,7 +153,7 @@ beijing:function(){
         leftRight = true
       }
 
-      if(abc.indexOf("mp4") !== -1){
+      if(abc.indexOf("mp4") >= 0){
         videoJudge = true
       }
 
@@ -251,7 +254,22 @@ beijing:function(){
   },
 
 
+ push:function(){
+   console.log("转移到push界面触动")
+   wx.navigateTo({
+    url: '../publish/publish',
+    // events: {
+    //   // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+    //   pageDataB: function(data) {
+    //     console.log('页面B触发事件时传递的数据1：',data)
+    //   },
+    //   someEvent: function(data) {
+    //     console.log('页面B触发事件时传递的数据2：',data)
+    //   }
+    // }
+  })
 
+ },
 
 
 

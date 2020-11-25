@@ -1,0 +1,75 @@
+<!-- 返回与title -->
+<view class="custom" style="padding-top:30rpx">
+
+  <view class="headKuangJia">
+    <button class="back" bindtap="back">返回</button>
+    <text class="titileText">官方商城</text>
+  </view>
+
+</view>
+
+
+
+<!-- 正品保证区域 -->
+<view class="zhengpin">
+  <text class="zhengpintext">正品保证，假一赔三</text>
+  <text hidden="{{!uptime}}">抢夺中{{hou}}:{{min}}:{{sec}}</text>
+  <text hidden="{{!miaoshaEnd}}">本轮抢夺结束</text>
+</view>
+
+<text class="listnumber">本次秒杀商品数：{{3}}</text>
+
+<!-- 商品列表 -->
+<view class="ProductList" wx:for="{{obj}}" wx:for-item="item" wx:for-index="number">
+
+  <!-- 商品单个卡片,整体横向排列 -->
+  <view class="card" style="">
+
+    <!-- 左上角固定图标 -->
+    <view>
+      <image class="paixu" src="../../images/paixu.png"></image>
+      <text class="paixutext" style="color:#ffffff">{{number+1}}</text>
+    </view>
+    <!-- 商品图片 -->
+    <view>
+      <image class="shopimage"
+        src="{{item.tupian0}}"></image>
+    </view>
+    <!-- 文字信息 -->
+    <view class="wenzi">
+      <text class="miaoshu">{{item.miaoshu}}</text>
+      <text class="siku">寺库销售价格：{{item.sikujiage}}</text>
+      <view class="much">
+        <text class="miaosha">秒杀价：{{item.jiage}}</text>
+        <text class="jiesheng">(节省{{item.sikujiage-item.jiage}}元)</text>
+      </view>
+    </view>
+    <!-- 库存数固定 在右上角 -->
+    <view>
+      <text class="number">商品库存：{{item.kucun}}</text>
+    </view>
+  </view>
+
+
+</view>
+
+<!-- 测试按钮 -->
+<button  type="primary" bindtap="ceshi" >测试触发通知</button>
+<!-- 底部预定通知 -->
+<button  hidden="{{!start}}"  class="destine"   bindtap="yuding" >
+  
+  <!-- 横向布局 -->
+  <view class="Destin_layout">
+
+    <!-- 左边布局 -->
+    <view class="left_text">
+      <text class="data_time">秒杀时间：{{targetYear}}年{{targetMonth}}月{{targetDay}}日 {{targetHours}}:{{targetMinutes}}:{{targetSeconds}}</text>
+      <text class="Countdown_text">{{day}}天{{hou}}时{{min}}分{{sec}}秒</text>
+    </view>
+    <text class="free_destin">免费预定</text>
+  </view>
+
+
+
+  
+</button>

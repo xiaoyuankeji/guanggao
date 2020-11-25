@@ -1,3 +1,5 @@
+
+<view wx:if="{{!videoJudge}}">
 <view class="toubu" >
 <image class="touxiang" mode="widthFix" src="{{touxiang}}"></image> 
 <view class="touxiangpang">
@@ -34,6 +36,57 @@
     open-type="share"
   />
 
-  <van-goods-action-button  open-type="contact" text="联系一手卖家" bind:click="onClickButton" />
+  <van-goods-action-button  open-type="contact" text="免费咨询买手" bind:click="onClickButton" />
 </van-goods-action>
 </view>
+
+</view>
+
+
+<view class="videozhengti" wx:if="{{videoJudge}}">
+<video  
+class="video"     
+autoplay="true" 
+loop="true" 
+
+src="{{tupian0}}"
+
+enable-play-gesture="true"
+
+object-fit="contain"
+></video>
+
+
+<view class="video_text" > 
+<text class="uerName_wenzi">@{{uerName}}</text>
+<text class="wenzi" >{{miaoshu}}</text>
+</view>
+
+
+<!-- 右侧按钮区域 -->
+<view class="video_button">
+
+<view class="right_button">
+<!-- 咨询按钮 -->
+<view >
+<button class="consulting_button"  open-type="contact" bindtap="onClickButton" >
+<image class="consulting" src="../../images/consulting.png"  ></image>
+<text class="right_wenzi">买手</text>
+</button>
+</view>
+
+<!-- 分享按钮 -->
+<view>
+<button class="share_button"  open-type="share" >
+<image class="share"  src="../../images/share.png" ></image>
+<text class="right_wenzi">转发</text>
+</button>
+</view>
+
+</view>
+</view>
+
+
+
+</view>
+

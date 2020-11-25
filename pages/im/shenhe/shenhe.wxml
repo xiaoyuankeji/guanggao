@@ -1,0 +1,32 @@
+<!--pages/im/shenhe/shenhe.wxml-->
+
+<text>待审核数：{{obj.length}}</text>
+
+<view wx:for="{{obj}}"  wx:for-tiem="item">
+	<view class="list">
+	<!-- 按钮区域 -->
+		<view class="buttonshenhe">
+		<button style="margin:10rpx" type="primary" bindtap="pass" data-id="{{item._id}}">通过</button>
+		
+		<button style="margin:10rpx" type="warn" bindtap="FailPass" data-id="{{item._id}}" >不通过</button>
+		</view>
+		<text>{{item.miaoshu}}</text>
+		<view class="wenzi">
+		<text>昵称：{{item.uerName}}</text>
+		<text>用户的oppenid是：{{item._id}}</text>
+	</view>
+		<image style="" src="{{item.tupian0}}"></image>
+		<video src="{{item.tupian0}}"></video>
+		<image style="" src="{{item.tupian1}}"></image>
+		<image style="" src="{{item.tupian2}}"></image>
+		<image style="" src="{{item.tupian3}}"></image>
+		<image style="" src="{{item.tupian4}}"></image>
+		<image style="" src="{{item.tupian5}}"></image>
+		<image style="" src="{{item.tupian6}}"></image>
+		<image style="" src="{{item.tupian7}}"></image>
+		<image style="" src="{{item.tupian8}}"></image>
+	
+
+
+	</view>
+</view>

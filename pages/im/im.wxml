@@ -34,3 +34,11 @@
 <navigator url="./room/room" open-type="navigate" class="customer">
 	<text>求货出货群</text>
 </navigator>
+
+<view  wx:if="{{shenhe}}">
+<van-divider />
+
+<navigator url="./shenhe/shenhe" open-type="navigate" class="customer">
+	<text>审核界面</text>
+</navigator>
+</view>

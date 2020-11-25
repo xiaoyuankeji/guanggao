@@ -5,8 +5,8 @@ Page({
     nickName: "点击登入",
     avatarUrl: "cloud://guojiawen-h3uw4.6775-guojiawen-h3uw4-1302038499/默认头像ICON (1).png",
     shouquan: false,
-    introduce: "介绍一下自己，让顾客更信任你~"
-
+    introduce: "介绍一下自己，让顾客更信任你~",
+    shenhe:false
 
   },
 
@@ -40,6 +40,7 @@ Page({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           console.log('加载中de授权', shouquan)
           var shouquan = that.data.shouquan = true
+         
           that.uerData(shouquan);
 
         }
@@ -148,6 +149,14 @@ Page({
     country,
     province,
     introduce) {
+
+    var shenhe  = this.data.shenhe
+    if(_id == "oHWfx0E5OCE3gt_H5zkWh76p8oVc"){
+      shenhe = true
+
+    }
+
+
     this.setData({
       nickName,
       avatarUrl,
@@ -156,7 +165,8 @@ Page({
       country,
       _id,
       openid,
-      introduce
+      introduce,
+      shenhe
     })
     // this.onLoad();
   },
@@ -204,8 +214,10 @@ Page({
     console.log("监控uerInfo是否执行")
   
     var that = this
+    var shenhe = this.data.shenhe
     
     var openid = openid
+    
     
     wx.getUserInfo({
       success: function (res) {
