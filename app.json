@@ -20,7 +20,10 @@
     "pages/text/text",
     "pages/im/my-publish/my-publish",
     "pages/im/shenhe/shenhe",
-    "pages/hot/hot"
+    "pages/hot/hot",
+    "pages/hot/hotdetails/hotdetails",
+    "pages/wodeshangpin/wodeshangpin",
+    "pages/dizhi/dizhi"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -45,7 +48,6 @@
         "iconPath": "images/hot2.png",
         "selectedIconPath": "images/hot.png",
         "text": "爆款秒杀"
-       
       },
       {
         "pagePath": "pages/im/im",

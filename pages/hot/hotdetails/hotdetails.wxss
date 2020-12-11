@@ -1,0 +1,164 @@
+/* pages/hot/hotdetails/hotdetails.wxss */
+
+
+.swiper{
+  width: 100%;
+  height: 750rpx;
+
+}
+
+.tupian{
+  width: 100%;
+  height: 750rpx;
+}
+
+.kucun{
+  position: absolute;
+  font-size: 20rpx;
+  right: 20rpx;
+  color: #222222;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  border-radius: 12rpx;
+  opacity:0.5;
+  top: 700rpx;
+  height: 1rpx;
+  background-color: #fff;
+  
+  
+}
+
+
+/* 信息部分 */
+.wenzi{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 3;
+  background-color: #fff;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+}
+
+.kuai1{
+  width: 49%;
+}
+
+.miaoshazuoce{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  
+}
+.miaosha{
+ margin-left: 50rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+  color: #F70303;
+}
+.jiesheng{
+  font-size: 20rpx;
+  color: #999999;
+  margin-top: 40rpx;
+}
+
+.kuai2{
+  width: 1%;
+  height: 20rpx;
+  justify-content: center;
+  opacity: 0.1;
+  
+}
+.siku{
+  font-size: 25rpx;
+  margin-left: 70rpx;
+  
+}
+.dianji{
+  font-size: 20rpx;
+  margin-top: 5rpx;
+  /* margin-top: 20rpx; */
+  color: #999999;
+}
+.sikujiage{
+  /* font-weight: bold; */
+  font-size: 35rpx;
+  color: #999999;
+  margin-top: 20rpx;
+
+}
+
+
+.zhongjian{
+  font-size: 50rpx;
+}
+
+.kuai3{
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+.sikumokuai{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 25rpx;
+}
+/* 正品模块 */
+.zhengpin{
+  width: 100%;
+  /* background-color: #F70303; */
+
+}
+
+/* 下方按钮模块 */
+.destine{
+  position: fixed;
+  border-radius: 0;
+  bottom: 0rpx;
+  height: 120rpx;
+  width: 100%;
+  background-color: #F70303;
+}
+
+.Destin_layout{
+  display:flex;
+  flex-direction: row;
+  margin-left: -20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  width: 750rpx;
+}
+.left_text{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rpx;
+  margin-left: 21rpx;
+}
+.data_time{
+  
+  font-size: 20rpx;
+  color: #ffffff;
+
+
+}
+.Countdown_text{
+  color: #ffffff;
+  margin-top: -30rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.free_destin{
+  position: absolute;
+  color: #ffffff;
+  font-size: 50rpx;
+  font-weight: bolder;
+  right: 50rpx;
+  margin-top: 0rpx;
+  
+}
+
+.tupianxiangqing{
+  width: 100%;
+}

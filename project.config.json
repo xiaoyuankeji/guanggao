@@ -32,9 +32,11 @@
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minifyWXSS": true,
+    "bundle": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.12.2",
@@ -98,6 +100,13 @@
         {
           "name": "pages/hot/hot",
           "pathName": "pages/hot/hot",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/hot/hotdetails/hotdetails",
+          "pathName": "pages/hot/hotdetails/hotdetails",
+          "query": "data=4c86bd845fa169ba0008ce204826c9b9&openid=oHWfx0E5OCE3gt_H5zkWh76p8oVc&shijiancha=754794508",
           "scene": null
         }
       ]

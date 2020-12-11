@@ -172,6 +172,14 @@ page {
   color: #999999;
 }
 
+.shoukong{
+  position: absolute;
+  margin-top: 160rpx;
+  right: 20rpx;
+  width: 150rpx;
+}
+
+
 .destine{
   position: fixed;
   border-radius: 0;

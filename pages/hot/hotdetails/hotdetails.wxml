@@ -1,0 +1,136 @@
+
+<view>
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="2000">
+  <block >
+    <swiper-item wx:if="{{tupian0Panduan}}" >
+      <image class="tupian"  src="{{tupian0}}" bindtap="yulan" data-tupian="{{tupian0}}"></image>
+  
+    </swiper-item>
+    <swiper-item wx:if="{{tupian1Panduan}}">
+      <image class="tupian" src="{{tupian1}}" bindtap="yulan" data-tupian="{{tupian1}}"></image>
+   
+    </swiper-item>
+    <swiper-item wx:if="{{tupian2Panduan}}">
+      <image class="tupian" src="{{tupian2}}" bindtap="yulan" data-tupian="{{tupian2}}"></image>
+   
+    </swiper-item>
+    <swiper-item wx:if="{{tupian3Panduan}}">
+      <image class="tupian" src="{{tupian3}}" bindtap="yulan" data-tupian="{{tupian3}}"></image>
+   
+    </swiper-item>
+    <swiper-item wx:if="{{tupian4Panduan}}">
+      <image class="tupian"  src="{{tupian4}}" bindtap="yulan" data-tupian="{{tupian4}}"></image>
+   
+    </swiper-item>
+    <swiper-item wx:if="{{tupian5Panduan}}">
+      <image class="tupian" src="{{tupian5}}" bindtap="yulan" data-tupian="{{tupian5}}"></image>
+   
+    </swiper-item>
+    <swiper-item wx:if="{{tupian6Panduan}}">
+      <image class="tupian" src="{{tupian6}}" bindtap="yulan" data-tupian="{{tupian6}}"></image>
+      
+    </swiper-item>
+    <swiper-item wx:if="{{tupian7Panduan}}">
+      <image class="tupian" src="{{tupian7}}" bindtap="yulan" data-tupian="{{tupian7}}"></image>
+   
+    </swiper-item>
+  
+  </block>
+ 
+</swiper>
+<text class="kucun">库存{{kucun}}</text>
+</view>
+
+
+<!-- 信息模块 -->
+<view class="wenzi">
+  <view class="kuai1">
+    <text  class="sikumokuai">秒杀价</text>
+    <view class="sikumokuai">
+      <text  class="miaosha">￥2344</text>
+      <text class="jiesheng">节省342</text>
+    </view>
+  </view>
+  <view class="kuai2"><text class="zhongjian">I</text></view>
+  <view class="kuai3" bindtap="siku">
+    <view class="sikumokuai" bindtap="siku">
+      <text class="siku"  bindtap="siku">寺库价格</text>
+      <text class="dianji"  bindtap="siku">(点击跳转)</text>
+    </view>
+    <view  class="sikumokuai">
+    <text class="sikujiage">￥4323</text>
+    </view>
+  </view>
+  
+</view>
+
+<!-- 正品保证 -->
+<view >
+  <image class="zhengpin" bindtap="zhengpin"  mode="widthFix" src="../../../images/zhengpinbaozheng.png"> </image>
+</view>
+
+<!-- 商品罗列 -->
+<view>
+  <image wx:if="{{tupian0Panduan}}" mode="widthFix" class="tupianxiangqing" src="{{tupian0}}" bindtap="yulan" data-tupian="{{tupian0}}" ></image>
+  <image wx:if="{{tupian1Panduan}}" mode="widthFix" class="tupianxiangqing" src="{{tupian1}}" bindtap="yulan" data-tupian="{{tupian1}}"></image>
+  <image wx:if="{{tupian2Panduan}}" mode="widthFix" class="tupianxiangqing" src="{{tupian2}}" bindtap="yulan" data-tupian="{{tupian2}}"></image>
+  <image wx:if="{{tupian3Panduan}}" mode="widthFix" class="tupianxiangqing" src="{{tupian3}}" bindtap="yulan" data-tupian="{{tupian3}}"></image>
+  <image wx:if="{{tupian4Panduan}}" mode="widthFix" class="tupianxiangqing" src="{{tupian4}}" bindtap="yulan" data-tupian="{{tupian4}}"></image>
+  <image wx:if="{{tupian5Panduan}}" mode="widthFix" class="tupianxiangqing" src="{{tupian5}}" bindtap="yulan" data-tupian="{{tupian5}}"></image>
+  <image wx:if="{{tupian6Panduan}}" mode="widthFix" class="tupianxiangqing" src="{{tupian6}}" bindtap="yulan" data-tupian="{{tupian6}}"></image>
+  <image wx:if="{{tupian7Panduan}}" mode="widthFix" class="tupianxiangqing" src="{{tupian7}}" bindtap="yulan" data-tupian="{{tupian7}}"></image>
+  <image  class="tupianxiangqing" src=""></image>
+  
+  
+</view>
+
+<!-- 倒计时 -->
+<button  wx:if="{{start}}"  class="destine"   bindtap="yuding" >
+  
+  <!-- 横向布局 -->
+  <view class="Destin_layout">
+
+    <!-- 左边布局 -->
+    <view class="left_text">
+      <text hidden="{{!start}}"   class="data_time">秒杀时间：{{targetYear}}年{{targetMonth}}月{{targetDay}}日 {{targetHours}}:{{targetMinutes}}:{{targetSeconds}}</text>
+      <text hidden="{{start}}"  class="data_time">秒杀中</text>
+      <text class="Countdown_text">{{day}}天{{hou}}时{{min}}分{{sec}}秒</text>
+    </view>
+    <text class="free_destin">{{mianfeiyuding}}</text>
+  </view>
+  
+</button>
+
+<!-- 购买按钮 -->
+<button  wx:if="{{!start}}" class="destine"   bindtap="paypost" >
+  
+  <!-- 横向布局 -->
+  <view class="Destin_layout">
+
+    <!-- 左边布局 -->
+    <view class="left_text">
+      <text hidden="{{!start}}"   class="data_time">秒杀时间：{{targetYear}}年{{targetMonth}}月{{targetDay}}日 {{targetHours}}:{{targetMinutes}}:{{targetSeconds}}</text>
+      <text hidden="{{start}}"  class="data_time">秒杀中</text>
+      <text class="Countdown_text">{{hou}}时{{min}}分{{sec}}秒</text>
+    </view>
+    <text class="free_destin">{{mianfeiyuding}}</text>
+  </view>
+  
+</button>
+
+<!-- !-- 售空按钮 --> 
+<button  wx:if="{{shoukong}}" class="destine"   bindtap="shoukong" >
+  
+  <!-- 横向布局 -->
+  <view class="Destin_layout">
+
+    <!-- 左边布局 -->
+    <view class="left_text">
+      <text hidden="{{!start}}"   class="data_time">秒杀时间：{{targetYear}}年{{targetMonth}}月{{targetDay}}日 {{targetHours}}:{{targetMinutes}}:{{targetSeconds}}</text>
+      <text hidden="{{start}}"  class="data_time">秒杀中</text>
+      <text class="Countdown_text">{{hou}}时{{min}}分{{sec}}秒</text>
+    </view>
+    <text class="free_destin">已售空</text>
+  </view>
+  
+</button>

@@ -1,5 +1,7 @@
 
 
+<button bindtap="pay">支付测试</button>
+<button bindtap="paypost">支付测试</button>
 <image src="cloud://guojiawen-h3uw4.6775-guojiawen-h3uw4-1302038499/oHWfx0E5OCE3gt_H5zkWh76p8oVc16012671323206.png"></image>
 
 <video src="cloud://guojiawen-h3uw4.6775-guojiawen-h3uw4-1302038499/1601025597110oHWfx0E5OCE3gt_H5zkWh76p8oVc.mp4"></video>

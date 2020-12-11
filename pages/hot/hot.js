@@ -19,7 +19,10 @@ Page({
     start: true,
     reciprocalTime: "",
     uptime:true,
-    miaoshaEnd:false
+    miaoshaEnd:false,
+    shijianchan:'',
+    mianfeiyuding:"免费预定",
+    qiangduozhong:false
    
   },
 
@@ -106,6 +109,28 @@ Page({
 
   },
 
+  tiaozhuan:function(e){
+    console.log("跳转到商品详情页",e.currentTarget.dataset.id)
+    var _id = e.currentTarget.dataset.id
+    var openid = this.data.openid
+    var objdata = [_id,openid]
+    var reciprocalTime = this.data.reciprocalTime
+    console.log ("时间差",reciprocalTime)
+    wx.navigateTo({
+      url: '../hot/hotdetails/hotdetails?data='+ _id + '&openid='+openid+'&shijiancha='+reciprocalTime,
+      // events: {
+      //   // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+      //   pageDataB: function(data) {
+      //     console.log('页面B触发事件时传递的数据1：',data)
+      //   },
+      //   someEvent: function(data) {
+      //     console.log('页面B触发事件时传递的数据2：',data)
+      //   }
+      // }
+    })
+
+  },
+  
 
   // 调用数据库商城信息
   cloudData: function () {
@@ -144,6 +169,11 @@ Page({
         console.log("授权成功返回什么", res)
 
         that.yudingcloud()
+        var mianfeiyuding= that.data.mianfeiyuding = "已预订"
+      
+        that.setData({
+          mianfeiyuding
+        })
 
       }
     })
@@ -280,8 +310,12 @@ Page({
 
     } else {
       var start = that.data.start = false
-      that.upTime(0)
+      var qiangduozhong = that.data.qiangduozhong = true
+      that.data.mianfeiyuding = "立即支付"
+      // 正计时调用
+      that.upTime(-time)
       that.setData({
+        qiangduozhong,
         start,
         countDown: false
       })
@@ -293,6 +327,7 @@ Page({
   upTime: function (reciprocalTime) {
     var that = this;
     var time = reciprocalTime / 1000 //时间差 
+  
     console.log('时间差是多少', reciprocalTime)
     // 获取天、时、分、秒
     let day = parseInt(time / (60 * 60 * 24));
@@ -319,7 +354,7 @@ Page({
       that.setData({
         countDown: true
       })
-      //  setTimeout(this.countDown, 1000);
+      // setTimeout(this.countDown, 1000);
       setTimeout(() => {
 
         this.upTime(reciprocalTime + 1000)
@@ -388,6 +423,7 @@ Page({
   // 把已授权的信息放到云数据库
   yudingcloud: function () {
     var openid = this.data.openid
+    var that = this
     console.log("检测openid是否取下来", openid)
     const db = wx.cloud.database()
     db.collection("yuding").add({
@@ -397,6 +433,7 @@ Page({
       },
       success: function (res) {
         console.log(res)
+
       }
     })
 
