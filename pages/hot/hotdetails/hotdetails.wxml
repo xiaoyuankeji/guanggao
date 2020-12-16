@@ -3,35 +3,35 @@
 <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="2000">
   <block >
     <swiper-item wx:if="{{tupian0Panduan}}" >
-      <image class="tupian"  src="{{tupian0}}" bindtap="yulan" data-tupian="{{tupian0}}"></image>
+      <image mode="center" class="tupian"  src="{{tupian0}}" bindtap="yulan" data-tupian="{{tupian0}}"></image>
   
     </swiper-item>
     <swiper-item wx:if="{{tupian1Panduan}}">
-      <image class="tupian" src="{{tupian1}}" bindtap="yulan" data-tupian="{{tupian1}}"></image>
+      <image mode="aspectFill" class="tupian" src="{{tupian1}}" bindtap="yulan" data-tupian="{{tupian1}}"></image>
    
     </swiper-item>
     <swiper-item wx:if="{{tupian2Panduan}}">
-      <image class="tupian" src="{{tupian2}}" bindtap="yulan" data-tupian="{{tupian2}}"></image>
+      <image mode="aspectFill" class="tupian" src="{{tupian2}}" bindtap="yulan" data-tupian="{{tupian2}}"></image>
    
     </swiper-item>
     <swiper-item wx:if="{{tupian3Panduan}}">
-      <image class="tupian" src="{{tupian3}}" bindtap="yulan" data-tupian="{{tupian3}}"></image>
+      <image mode="aspectFill" class="tupian" src="{{tupian3}}" bindtap="yulan" data-tupian="{{tupian3}}"></image>
    
     </swiper-item>
     <swiper-item wx:if="{{tupian4Panduan}}">
-      <image class="tupian"  src="{{tupian4}}" bindtap="yulan" data-tupian="{{tupian4}}"></image>
+      <image mode="aspectFill" class="tupian"  src="{{tupian4}}" bindtap="yulan" data-tupian="{{tupian4}}"></image>
    
     </swiper-item>
     <swiper-item wx:if="{{tupian5Panduan}}">
-      <image class="tupian" src="{{tupian5}}" bindtap="yulan" data-tupian="{{tupian5}}"></image>
+      <image mode="aspectFill" class="tupian" src="{{tupian5}}" bindtap="yulan" data-tupian="{{tupian5}}"></image>
    
     </swiper-item>
     <swiper-item wx:if="{{tupian6Panduan}}">
-      <image class="tupian" src="{{tupian6}}" bindtap="yulan" data-tupian="{{tupian6}}"></image>
+      <image mode="aspectFill" class="tupian" src="{{tupian6}}" bindtap="yulan" data-tupian="{{tupian6}}"></image>
       
     </swiper-item>
     <swiper-item wx:if="{{tupian7Panduan}}">
-      <image class="tupian" src="{{tupian7}}" bindtap="yulan" data-tupian="{{tupian7}}"></image>
+      <image mode="aspectFill" class="tupian" src="{{tupian7}}" bindtap="yulan" data-tupian="{{tupian7}}"></image>
    
     </swiper-item>
   
@@ -42,13 +42,14 @@
 </view>
 
 
+
 <!-- 信息模块 -->
 <view class="wenzi">
   <view class="kuai1">
     <text  class="sikumokuai">秒杀价</text>
     <view class="sikumokuai">
-      <text  class="miaosha">￥2344</text>
-      <text class="jiesheng">节省342</text>
+      <text  class="miaosha">￥{{jiage}}</text>
+      <text class="jiesheng">节省{{sikujiage - jiage}}</text>
     </view>
   </view>
   <view class="kuai2"><text class="zhongjian">I</text></view>
@@ -58,19 +59,22 @@
       <text class="dianji"  bindtap="siku">(点击跳转)</text>
     </view>
     <view  class="sikumokuai">
-    <text class="sikujiage">￥4323</text>
+    <text class="sikujiage">￥{{sikujiage}}</text>
     </view>
   </view>
   
 </view>
 
+
+
 <!-- 正品保证 -->
 <view >
-  <image class="zhengpin" bindtap="zhengpin"  mode="widthFix" src="../../../images/zhengpinbaozheng.png"> </image>
+  <image class="zhengpin" bindtap="zhengpinshuoming"  mode="widthFix" src="../../../images/zhengpinbaozheng.png"> </image>
 </view>
 
 <!-- 商品罗列 -->
 <view>
+  <view class="miaoshu" >{{miaoshu}}</view>
   <image wx:if="{{tupian0Panduan}}" mode="widthFix" class="tupianxiangqing" src="{{tupian0}}" bindtap="yulan" data-tupian="{{tupian0}}" ></image>
   <image wx:if="{{tupian1Panduan}}" mode="widthFix" class="tupianxiangqing" src="{{tupian1}}" bindtap="yulan" data-tupian="{{tupian1}}"></image>
   <image wx:if="{{tupian2Panduan}}" mode="widthFix" class="tupianxiangqing" src="{{tupian2}}" bindtap="yulan" data-tupian="{{tupian2}}"></image>

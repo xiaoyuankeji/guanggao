@@ -108,6 +108,18 @@
           "pathName": "pages/hot/hotdetails/hotdetails",
           "query": "data=4c86bd845fa169ba0008ce204826c9b9&openid=oHWfx0E5OCE3gt_H5zkWh76p8oVc&shijiancha=754794508",
           "scene": null
+        },
+        {
+          "name": "pages/zhengpinshuoming/zhengpinshuoming",
+          "pathName": "pages/zhengpinshuoming/zhengpinshuoming",
+          "query": "data=4c86bd845fa169ba0008ce204826c9b9&openid=oHWfx0E5OCE3gt_H5zkWh76p8oVc&shijiancha=754794508",
+          "scene": null
+        },
+        {
+          "name": "pages/dizhi/dizhi",
+          "pathName": "pages/dizhi/dizhi",
+          "query": "shangpin=fc61cd8c5fa15f140009540617db15b6",
+          "scene": null
         }
       ]
     }

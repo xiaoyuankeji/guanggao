@@ -19,7 +19,8 @@ Page({
     tupian7: '',
     tupian8: '',
     _id :"",
-    shoukong:false
+    shoukong:false,
+    sikutiaozhuan:''
     
 
   },
@@ -40,6 +41,13 @@ Page({
     this.targetTime()
 
   },
+
+  zhengpinshuoming:function(){
+    wx.navigateTo({
+      url: '../../zhengpinshuoming/zhengpinshuoming',
+    })
+  },
+
 
   // 预览图片大图
   yulan: function (e) {
@@ -97,9 +105,10 @@ Page({
 
   // 跳转寺库小程序相关页面
   siku: function () {
+   var sikutiaozhuan =  this.data.sikutiaozhuan 
     wx.navigateToMiniProgram({
       appId: 'wxf9d093e94ba38998',
-      path: 'pages/product/detail/productDetail.html?id=847328473&src=productList-pop',
+      path: sikutiaozhuan,
       extraData: {
         foo: 'bar'
       },
@@ -143,6 +152,12 @@ Page({
         var tupian7Panduan = true
 
         var kucun = res.data.kucun
+        var sikutiaozhuan = res.data.sikutiaozhuan
+        that.data.sikutiaozhuan =sikutiaozhuan
+
+        var jiage = res.data.jiage
+        var sikujiage = res.data.sikujiage
+        var miaoshu = res.data.miaoshu
 
         if(kucun == 0 ){
           var shoukong = that.data.shoukong = true
@@ -185,6 +200,9 @@ Page({
 
         that.setData({
           kucun,
+          jiage,
+          sikujiage,
+          miaoshu,
           tupian0,
           tupian0Panduan,
           tupian1,
@@ -361,7 +379,7 @@ Page({
       that.setData({
         countDown: true
       })
-       setTimeout(this.countDown, 1000);
+      //  setTimeout(this.countDown, 1000);
       setTimeout(() => {
 
         this.countTime(reciprocalTime - 1000)
@@ -475,6 +493,7 @@ paypost() {
 pay(payData) {
   console.log("支付调动了吗")
   let that = this;
+  var _id = that.data._id
   //官方标准的支付方法
   wx.requestPayment({
     timeStamp: payData.timeStamp,
@@ -486,7 +505,7 @@ pay(payData) {
       console.log("支付成功", res)
     
       wx.navigateTo({
-        url: '../../dizhi/dizhi'
+        url: '../../dizhi/dizhi?shangpin=' +  _id
     
       })
     },

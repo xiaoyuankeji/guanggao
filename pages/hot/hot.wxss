@@ -1,7 +1,10 @@
 /* 整体控制 */
 page {
   background: #ffffff;
-  height: 1900rpx;
+  width: 100%;
+
+  overflow-x: hidden;
+  /* height: 1900rpx; */
 }
 
 /* pages/hot/hot.wxss */
@@ -195,7 +198,7 @@ page {
   margin-left: -20rpx;
   padding-left: 20rpx;
   padding-right: 20rpx;
-  width: 750rpx;
+  width: 100%;
 }
 .left_text{
   display: flex;
@@ -203,7 +206,7 @@ page {
   margin-top: 10rpx;
   margin-left: 21rpx;
 }
-.data_time{
+.datatime{
   
   font-size: 20rpx;
   color: #ffffff;
@@ -218,11 +221,11 @@ page {
 }
 
 .free_destin{
-  
+  position: absolute;
   color: #ffffff;
   font-size: 50rpx;
   font-weight: bolder;
-  margin-left: 100rpx;
+  right: 20rpx;
   margin-top: 0rpx;
   
 }

@@ -53,7 +53,7 @@ exports.main =  (event, context) => {
       lang: 'zh_CN',
       data: {
         time2: {
-          value:"2020年12月21日 12:11"
+          value:"2020年12月24日 12:00"
         },
         thing3: {
           value: '预约的圣诞节秒杀即将开始'

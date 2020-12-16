@@ -28,7 +28,12 @@
   
 }
 
-
+.miaoshu{
+  background-color: #fff;
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
 /* 信息部分 */
 .wenzi{
   display: flex;

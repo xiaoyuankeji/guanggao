@@ -109,6 +109,12 @@ Page({
 
   },
 
+  zhengmingshuoming: function (params) {
+    wx.navigateTo({
+      url: '../zhengpinshuoming/zhengpinshuoming',
+    })
+  },
+
   tiaozhuan:function(e){
     console.log("跳转到商品详情页",e.currentTarget.dataset.id)
     var _id = e.currentTarget.dataset.id
@@ -199,7 +205,14 @@ Page({
         var targetDay = targetTime.getDate();
         var targetHours = targetTime.getHours();
         var targetMinutes = targetTime.getMinutes();
+        if(targetMinutes == 0){
+          targetMinutes = "00"
+        }
         var targetSeconds = targetTime.getSeconds();
+        if(targetSeconds == 0){
+          targetSeconds = "00"
+        }
+
         var xxxx = targetTime.toLocaleString();
         that.setData({
           targetYear,

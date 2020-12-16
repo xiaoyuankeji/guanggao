@@ -1,1 +1,76 @@
 /* pages/dizhi/dizhi.wxss */
+.zhengti{
+  display:flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+.name{
+  display: flex;
+  flex-direction: row;
+  
+  width: 100%;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  justify-items: center;
+  align-items: center;
+  height: 80rpx;
+}
+
+.name_text{
+  font-size: 30rpx;
+  justify-items: center;
+  
+  color: #555555;
+
+  
+}
+
+.name_input{
+  position: absolute;
+  /* background-color:#222222; */
+  border: 3rpx solid #999999;
+  right: 20rpx;
+  width: 600rpx;
+  border-radius: 10rpx;
+  height: 80rpx;
+}
+
+.phone{
+  width: 80%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  justify-items: center;
+  align-items: center;
+
+
+}
+
+.dizhi{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+.jutidizhi{
+  /* background-color: #999999; */
+  border: 3rpx solid #999999;
+  width: 710rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+}
+
+.queren{
+  position: fixed;
+  width: 100%;
+  bottom: 0rpx;
+  color: #ffffff;
+  background-color: #F70303;
+  justify-items: center;
+  border-radius: 0rpx;
+  align-items: center;
+}
