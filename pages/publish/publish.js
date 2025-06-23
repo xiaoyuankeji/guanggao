@@ -60,7 +60,8 @@ Page({
     var huancun1  = this.data.huancun1
     huancun1 ++
     this.setData({
-      huancun:huancun1
+      // Update the correct counter field
+      huancun1: huancun1
     })
   },
 
@@ -317,7 +318,8 @@ onImgIp:function(){
   uploudOpenidlist: function (time) {
     var that = this
 
-    this.uershuju()
+    // Ensure user data is refreshed using the current openid
+    this.uershuju(this.data._id)
 
     console.log("获取授权弹框")
     var openid = this.data._id
